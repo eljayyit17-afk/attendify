@@ -1,0 +1,2 @@
+@props(['status'])
+<span class="inline-flex rounded-md px-2 py-1 text-xs font-medium {{ match($status) { 'approved', 'Present' => 'bg-emerald-50 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300', 'pending', 'Late' => 'bg-amber-50 text-amber-800 dark:bg-amber-950 dark:text-amber-300', 'rejected', 'Absent' => 'bg-red-50 text-red-800 dark:bg-red-950 dark:text-red-300', 'VL', 'SL' => 'bg-violet-50 text-violet-800 dark:bg-violet-950 dark:text-violet-300', default => 'bg-zinc-100 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300' } }}">{{ ucfirst($status) }}</span>
