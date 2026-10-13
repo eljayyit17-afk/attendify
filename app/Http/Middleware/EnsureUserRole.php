@@ -15,11 +15,11 @@ class EnsureUserRole
     ): Response {
         $user = $request->user();
 
-        if (!$user) {
+        if (! $user) {
             return redirect()->route('login');
         }
 
-        if (!$user->is_active) {
+        if (! $user->is_active) {
             abort(403, 'Your account is inactive.');
         }
 
